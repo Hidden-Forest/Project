@@ -1,0 +1,233 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="OrcasThemes">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<title>Home</title>
+<!-- Bootstrap core CSS -->
+<link href="css/bootstrap.css" rel="stylesheet">
+<!-- Custom styles for this template -->
+<link rel="stylesheet" href="css/screen.css">
+<link rel="stylesheet" href="css/animation.css">
+<!--[if IE 7]>
+
+<![endif]-->
+<link rel="stylesheet" href="css/font-awesome.css">
+<!--[if lt IE 8]>
+<link rel="stylesheet" href="css/ie.css" type="text/css" media="screen, projection">
+<![endif]-->
+<link href="css/lity.css" rel="stylesheet">
+</head>
+<body>
+<div id="myvideo">
+<!-- HOME 1 -->
+<div id="home1" class="container-fluid standard-bg">
+ <!-- HEADER -->
+ <div class="row header-top">
+	<div class="col-lg-3 col-md-6 col-sm-5 col-xs-8">
+	   <a class="main-logo" href="#"><img src="img/main-logo.png" class="main-logo img-responsive" alt="Muvee Reviews" title="Muvee Reviews"></a>
+	</div>
+
+	<div class="col-lg-3 col-md-6 col-sm-7 hidden-xs">
+	   <div class="right-box">
+		  <button type="button" class="access-btn" data-toggle="modal" data-target="#enquirypopup">上传视频</button>
+	   </div>
+	</div>
+ </div>
+ <!-- MENU -->
+ <div class="row home-mega-menu ">
+	<div class="col-md-12">
+	   <nav class="navbar navbar-default">
+		  <div class="navbar-header">
+			 <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".js-navbar-collapse">
+			 <span class="sr-only">Toggle navigation</span>
+			 <span class="icon-bar"></span>
+			 <span class="icon-bar"></span>
+			 <span class="icon-bar"></span>
+			 </button>
+		  </div>
+		  <div class="collapse navbar-collapse js-navbar-collapse megabg dropshd ">
+			 <ul class="nav navbar-nav">
+				<li><a href="index.html">Home</a></li>
+			 </ul>
+			 <div class="search-block">
+				<form>
+				   <input type="search" placeholder="Search">
+				</form>
+			 </div>
+		  </div>
+		  <!-- /.nav-collapse -->
+	   </nav>
+	</div>
+ </div>
+ <!-- CORE -->
+ <div class="row">
+	<!-- SIDEBAR -->
+	<div class="col-lg-2 col-md-4 hidden-sm hidden-xs">
+
+	</div>
+	<!-- HOME MAIN POSTS -->	
+	<div class="col-lg-10 col-md-8">
+	   <section id="home-main">
+		  <h2 class="icon"><i class="fa fa-television" aria-hidden="true"></i>popular videos</h2>
+		  <div class="row">
+			 <!-- ARTICLES -->
+			 <div class="col-lg-9 col-md-12 col-sm-12">
+				<div class="row auto-clear">
+				   <article class="col-lg-3 col-md-6 col-sm-4" v-for="video in videos">
+					  <!-- POST L size -->
+					  <div class="post post-medium">
+						 <div class="thumbr">
+							<a class="afterglow post-thumb" href="#" v-on:click.prevent="video_play(video.id)"  target="_blank">
+							   <span class="play-btn-border" title="Play"><i class="fa fa-play-circle headline-round" aria-hidden="true"></i></span>
+							   <div class="cactus-note ct-time font-size-1"><span>02:02</span></div>
+							   <img class="img-responsive" v-bind:src="video.image_url" alt="#">
+							</a>
+						 </div>
+						 <div class="infor">
+							<h4>
+							   <a class="title" href="#">{{video.name}}</a>
+							</h4>
+							<span class="posts-txt" title="Posts from Channel"><i class="fa fa-thumbs-up" aria-hidden="true"></i>20.895</span>
+							<div class="ratings">
+							   <i class="fa fa-star" aria-hidden="true"></i>
+							   <i class="fa fa-star" aria-hidden="true"></i>
+							   <i class="fa fa-star-half-o" aria-hidden="true"></i>
+							   <i class="fa fa-star-o"></i>
+							   <i class="fa fa-star-half"></i>
+							</div>
+						 </div>
+					  </div>
+				   </article>
+				</div>
+				<div class="clearfix spacer"></div>
+			 </div>
+			 <!-- RIGHT ASIDE -->
+			 <div class="col-lg-3 hidden-md col-sm-12 text-center top-sidebar">
+
+			 </div>
+		  </div>
+	   </section>
+	</div>
+ </div>
+</div>
+
+
+<!-- CHANNELS -->
+<div id="channels-block" class="container-fluid channels-bg">
+ <div class="container-fluid ">
+	<div class="col-md-12">
+	   <!-- CHANNELS -->
+	   <section id="channels">
+	   </section>
+	   <div class="clearfix"></div>
+	</div>
+ </div>
+</div>
+
+<!-- FOOTER -->
+<div id="footer" class="container-fluid footer-background">
+ <div class="container">
+	<footer>
+	   <!-- SECTION FOOTER -->
+	   <div class="row">
+		  <!-- SOCIAL -->
+		  <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+			 <div class="row auto-clear">
+				<div class="col-md-12">
+				</div>
+			 </div>
+		  </div>
+	   </div>
+	   <div class="row copyright-bottom text-center">
+		  <div class="col-md-12 text-center">
+			 <a href="" class="footer-logo" title="Video Magazine Bootstrap HTML5 template">
+			 <img src="img/footer-logo.png" class="img-responsive text-center" alt="Video Magazine Bootstrap HTML5 template">
+			 </a>	
+			 <p>Copyright &copy; Authored by Zhang.<a target="_blank" href="#"></a></p>
+		  </div>
+	   </div>
+	</footer>
+ </div>
+</div>
+
+<!-- MODAL -->
+<div id="enquirypopup" class="modal fade in " role="dialog">
+ <div class="modal-dialog">
+	<!-- Modal content-->
+	<div class="modal-content row">
+	   <div class="modal-header custom-modal-header">
+		 
+	   </div>
+	   <div class="modal-body">
+		  <form name="info_form" class="form-inline" action="/video" method="post" enctype="multipart/form-data">
+			 <div class="form-group col-sm-12">
+				<input type="text" class="form-control" name="video_name" id="name" placeholder="视频名称">
+			 </div>
+			 <div class="form-group col-sm-12">
+				<input type="text" class="form-control" name="video_desc" id="name" placeholder="视频描述">
+			 </div>
+			 <div class="form-group col-sm-12">
+				<input type="file" class="form-control" name="video_file" id="name" placeholder="视频文件">
+			 </div>
+			 <div class="form-group col-sm-12">
+				<input type="file" class="form-control" name="image_file" id="name" placeholder="封面图片">
+			 </div>
+			 <div class="form-group col-sm-12">
+				<button class="subscribe-btn pull-right" type="submit" title="Subscribe">提交</button>
+			 </div>
+		  </form>
+	   </div>
+	</div>
+ </div>
+</div>
+</div>
+</body>
+<!-- JAVA SCRIPT -->
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery-1.12.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/lity.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+ $(".nav .dropdown").hover(function() {
+   $(this).find(".dropdown-toggle").dropdown("toggle");
+ });
+</script>
+<script>
+	var app = new Vue({ 
+		el: '#myvideo', 
+		data: { 
+			videos:[],
+			video_play_url: "single_video.html?id="
+		}, 
+		methods:{
+			getall_videos: function() {
+				$.ajax({
+					url: "/video",
+					type: "get",
+					context: this,
+					success:function(res, status, xhr){
+						this.videos = res;
+					}
+				})
+			},
+			video_play:function(video_id){
+				$.ajax({
+					url: "/play/"+video_id,
+					type: "get",
+					context: this,
+					success:function(res, status, xhr){
+						var newPage = window.open("about:blank", "_blank");
+						newPage.document.write(res);
+					}
+				})
+			}
+		}
+	}); 
+	app.getall_videos();
+</script>
+</html>
